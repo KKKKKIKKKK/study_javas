@@ -1,16 +1,22 @@
 public class MakingGamebyOneHand {
     public static void main(String[] args) {
-        String first = "one" ;
-        String second = "two" ;
-        String third = "three" ;
+        String emptyA = "";
+        String emptyB = "";
+        String emptyC = "";
       
-        third = first;
-        System.out.println(third);
-        third = second;
-        System.out.println(third);
-        //return 0;
+        String card1 = "1";
+        emptyA = card1;
+        
+        String card2 = "2";
+        emptyC = card2;
+        emptyB = emptyC;
 
-    
+        emptyC = emptyA;
+        emptyA = emptyB;
+        emptyB = "";
+
+        System.out.println("A = " + emptyA);
+        System.out.println("B = " + emptyB);
+        System.out.println("C = " + emptyC);
     }
-    
 }
