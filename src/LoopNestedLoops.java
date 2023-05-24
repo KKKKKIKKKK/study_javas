@@ -10,9 +10,10 @@ public class LoopNestedLoops
 
     // code block to be executed
     System.out.println("for " +line);
+    
+    
+    
     String s = "for";
-
-
     for (int line_2= 1; line_2< second ;  line_2 = line_2  +1 ) {
         System.out.print("_?");
         if (line == line_2) {
