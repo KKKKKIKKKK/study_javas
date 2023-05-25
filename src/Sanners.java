@@ -2,8 +2,10 @@ import java.util.Scanner;
 public class Sanners {
     public static void main(String[] args) {
         Scanner myObj = new Scanner(System.in);  // Create a Scanner object
+        
+        
         //System.out.println("Enter username");
-    //실질적으로 값을 받는 곳 (NEST LINE)
+    //실질적으로 값을 받는 곳 (NEXT LINE)
         //String userName = myObj.nextLine();  // Read user input
        // System.out.println("Username is: " + userName);  // Output user input
       

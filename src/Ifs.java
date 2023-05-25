@@ -31,15 +31,15 @@ public class Ifs {
 
 
      if(time<12) {
-        System.out.println(x:"오전입니다");
+        System.out.println("오전입니다");
      }
 
      else if(time<18) {
-        System.out.println(x:"오후입니다");
+        System.out.println("오후입니다");
      }
 
      if(time<24) {
-        System.out.println(x:"밤입니다");
+        System.out.println("밤입니다");
      }
 
 
