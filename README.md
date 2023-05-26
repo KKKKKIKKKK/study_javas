@@ -7,8 +7,7 @@
 | --- | --- |--- | --- |
 | Print | Main.java| 화면에 문자 출력 | |
 | 데이터 타입 변환 | [TypeCasting.java] (https://github.com/KKKKKIKKKK/study_javas/blob/master/src/TypeCasting.java)| 데이터 타입을 변경 | --- |
-| If | [Ifs.java](./src/Ifs.java)  |
- 조건에 따라 분기 |  |
+| If | [Ifs.java](./src/Ifs.java)  |조건에 따라 분기 |  |
 ## JAVA 연습문제 
 
 ## 
