@@ -20,8 +20,9 @@ public class TeacherPollswithout_C {
         for (int second = 0; second < polls.length; second = second + 2) {
             System.out.println(polls[second][0]);
             System.out.print("답하기 : ");
+
             answers[count] = myObj.nextLine();
-            System.out.println( answers[count]);
+            System.out.println( answers[count]  );
             count = count + 1;
             System.out.println();
             
@@ -29,7 +30,7 @@ public class TeacherPollswithout_C {
         }
         for (int i =0; i<4; i=i+1) {
             System.out.print(answers[i]);
-
+            
         
         }
     
