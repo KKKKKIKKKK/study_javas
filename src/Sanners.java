@@ -11,6 +11,7 @@ public class Sanners {
       
         int first = 0;
         int second = 0;
+
         first = myObj.nextInt();
         second = myObj.nextInt();
         System.out.println(first +","+second);

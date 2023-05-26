@@ -19,7 +19,7 @@ public class TeacherPollswithout_C {
         int count = 0;
         for (int second = 0; second < polls.length; second = second + 2) {
             System.out.println(polls[second][0]);
-            System.out.print("답하기 : ");
+            System.out.print(polls[third][1][0]);
 
             answers[count] = myObj.nextLine();
             System.out.println( answers[count]  );

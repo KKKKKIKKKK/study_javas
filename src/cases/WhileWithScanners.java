@@ -1,9 +1,9 @@
-public  class WhileWithScanners {
+public class WhileWithScanners {
     public static void main(String[] args) {
         //try catch 문 사용 
         try {
          //break 문에 대한 사용법 알기 
-            for ( int first =0 ;first< 4; first = first +1 ){
+            for (int first =0 ;first< 4; first = first +1 ){
                 if(first ==2) {       // first 값이 2이면 for 문 종료 
                     break;
                 }
@@ -13,14 +13,10 @@ public  class WhileWithScanners {
 
             
         
-        }catch(
-
-    Exception e)
-    {
+        }catch(Exception e){
         System.out.println();
 
-    }finally
-    {
+    }finally{
         System.out.println();
     }System.out.println();
 
