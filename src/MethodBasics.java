@@ -13,7 +13,7 @@ public class MethodBasics {
     public int T(int y) //data의 값과 return과 같아야 함. /<return_data_type>- int로 변경 
     {
         int result = y + 1; //return값에는 변수가 항상 들어가야함 
-        return result; // x+1의 값이 들어가야함  
+        return result; // y+1의 값이 들어가야함  
     }
     public static void main(String[] args) {
         
