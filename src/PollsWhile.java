@@ -10,7 +10,7 @@ public class PollsWhile {
             //☆ 1-1. 선택에 따라 안내글을 보여드립니다 (답변) 사용
             System.out.println("선택에 따라 안내글을 보여드립니다.");
 
-            boolean loops = true;
+                boolean loops = true;
            
                 System.out.println("------작동 key-----");
                 System.out.println("(E)xit : 종료");

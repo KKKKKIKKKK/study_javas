@@ -38,7 +38,7 @@ public class Ifs {
         System.out.println("오후입니다");
      }
 
-     if(time<24) {
+     else {
         System.out.println("밤입니다");
      }
 

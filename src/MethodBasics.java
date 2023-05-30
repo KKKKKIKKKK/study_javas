@@ -1,41 +1,32 @@
 public class MethodBasics {
-//<access_modifier> <return_type> <method_name>(list of)
-//{
-//body
-//}
-//x에 x+1 
-    public int F(int x) //data의 값과 return과 같아야 함. /<return_data_type>- int로 변경 
+    // <access_modifier> <return_type> <method_name>( list_of_parameters)
+    // {
+    // //body
+    // }
+    // x에 +1
+    public int F(int x) // x = 0
     {
-        int result = x + 1; //return값에는 변수가 항상 들어가야함 
-        return result; // x+1의 값이 들어가야함  
-    }
-    
-    public int T(int y) //data의 값과 return과 같아야 함. /<return_data_type>- int로 변경 
-    {
-        int result = y + 1; //return값에는 변수가 항상 들어가야함 
-        return result; // y+1의 값이 들어가야함  
+        int result = x + 1;
+        return result;
     }
     public static void main(String[] args) {
-        
         try {
-            
-            int x=4;
-            int y =0;
-            //y= x + 1; //변수에 +1
-            MethodBasics  methodBasics = new MethodBasics (); //변수의 타입=class 
-               //class 내에 있는 function 
-            
-           y = methodBasics.F(x);
-           
-           //1.인스턴스화 시키고 똑같은 값을 도출하도록 
-           y = methodBasics.T(y);
-           
+            int x = 4;
+            int y = 0;
+            // y = x + 1; // 변수에 + 1
+            // y = F(x);
+            MethodBasics methodBasics = new MethodBasics();
+            y = methodBasics.F(x);
 
-        
+            y = y + 1; // 변수에 + 1
+            MethodBasics methodBasics_first = new MethodBasics();
+            y = methodBasics_first.F(y);  // F(0)
+            y = methodBasics_first.F(y);  // F(0)
+
         } catch (Exception e) {
             // TODO: handle exception
         }
         System.out.println();
-        //return0;  //결과값 
+        // return 0;
     }
 }
