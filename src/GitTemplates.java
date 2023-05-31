@@ -5,7 +5,8 @@ public class GitTemplates {
             int first =0 ;  //1. first 는 동일 
             int second = 1 ;  //2. second 추가. 
 
-            second =second +1 ;
+            second =first +1 ;
+            first = first+ 1 ; 
 
 
 
@@ -13,6 +14,6 @@ public class GitTemplates {
             // TODO: handle exception
         }
 
-        return0;
+        //return0;
     }
 }
