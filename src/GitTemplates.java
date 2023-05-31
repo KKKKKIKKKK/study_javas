@@ -2,7 +2,10 @@ public class GitTemplates {
     public static void main(String[] args) {
         try {
             
-            int first = 0;  //int 변수는 0
+            int first =0 ;  //1. first 는 동일 
+            int second = 1 ;  //2. second 추가. 
+
+            second =first +1 ;
             first = first+ 1 ; 
 
 
@@ -11,6 +14,6 @@ public class GitTemplates {
             // TODO: handle exception
         }
 
-        return0;
+        //return0;
     }
 }
