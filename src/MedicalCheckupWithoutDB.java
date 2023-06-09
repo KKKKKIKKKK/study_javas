@@ -62,18 +62,10 @@ public class MedicalCheckupWithoutDB {
             MedicalCheckup_spec.put("유지 방안", "");
             MedicalCheckup_list.add(MedicalCheckup_spec);
 
-            for (HashMap<String, String> medical : MedicalCheckup_list) {
-                System.out.println("이름: " + medical.get("이름"));
-                System.out.println("성별: " + medical.get("성별"));
-                System.out.println("나이: " + medical.get("나이"));
-                System.out.println("키 (cm), 체중 (kg): " + medical.get("키 (cm), 체중 (kg)"));
-                System.out.println("혈압 (mmHg), 혈당 (mg/dL): " + medical.get("혈압 (mmHg), 혈당 (mg/dL)"));
-                System.out.println("검진 결과: " + medical.get("검진 결과"));
-                System.out.println("재검진 항목: " + medical.get("재검진 항목"));
-                System.out.println("유지 방안: " + medical.get("유지 방안"));
-                System.out.println();
+            for (HashMap<String, String> medical: MedicalCheckup_list){
+                System.out.println(medical.get("이름") +medical.get("성별") +medical.get("나이") +medical.get("키") +medical.get("혈압") +medical.get("체중") +medical.get("혈당") +medical.get("유지방안"));
             }
-
+            System.out.println();
         } catch (Exception e) {
             e.printStackTrace();
         }
