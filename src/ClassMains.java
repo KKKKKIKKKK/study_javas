@@ -1,5 +1,5 @@
-import cases.ClassSeconds;
-public class ClassMains {
+import cases.ClassSeconds; 
+public class ClassMains { 
     public static void main(String[] args) {
         
         try {

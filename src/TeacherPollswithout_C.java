@@ -24,7 +24,15 @@ public class TeacherPollswithout_C {
             System.out.print(polls [second+1] [third]);
            
            
-            System.out.println();
+            System.out.println(); 
+
+            count = myObj.nextInt();
+            count =  count - 1; // 배열 = 0, 1, 2 순서니까 입력값에서 - 1
+            System.out.print("답) "+polls[1][ count]);
+            answers[count] =  count ;
+
+
+            //아직 ing 
          
         }
        
