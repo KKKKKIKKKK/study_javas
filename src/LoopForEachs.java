@@ -48,7 +48,7 @@ public class LoopForEachs {
 
 
 
-for(HashMap<String, String> car : carList){                      //프린트 하기 위한 , for each 준비구문 
+        for(HashMap<String, String> car : carList){                      //프린트 하기 위한 , for each 준비구문 
      System.out.println(car.get("CarCompany")+car.get("CarName") +car.get( "year"));  //가져올때.
     
      System.out.println();

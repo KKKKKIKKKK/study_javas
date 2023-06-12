@@ -35,6 +35,9 @@ public class T_ConnectDBs0612 {
             VALUE 
             ('CAR-01', 'AUDI');
             */
+
+        
+            
             String companyId = "CAR-01";
             String company = "AUDI";
             query = "INSERT INTO factorys " +
