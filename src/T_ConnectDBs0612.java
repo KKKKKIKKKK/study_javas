@@ -2,7 +2,6 @@ import java.sql.*;
 
 public class T_ConnectDBs0612 {
     public static void main(String[] args) {
-       
         try {
             // - MySQL workbench 실행 : JDBCs
             // - User/password와 접속 IP:port 접속
@@ -20,7 +19,7 @@ public class T_ConnectDBs0612 {
             while (resultSet.next()) {
                 System.out.println(resultSet.getString("COMPANY_ID") + resultSet.getString("COMPANY"));
             }
-            
+
             // SELECT COUNT(*) AS CNT FROM factorys;
             query = "SELECT COUNT(*) AS CNT FROM factorys";
             resultSet = statement.executeQuery(query);
@@ -42,13 +41,15 @@ public class T_ConnectDBs0612 {
                     "(COMPANY_ID, COMPANY) " +
                     "VALUES " +
                     "('"+companyId+"', '"+company+"') ";
-           
+            
             int count = statement.executeUpdate(query);
-            System.out.println("추가된 레코드 수: " + count);
+            System.out.println("삽입된 레코드 수: " + count);
 
-            // UPDATE factorys
-            // SET COMPANY = '페라리'
-            // WHERE COMPANY_ID = 'CAR-01';
+            /*
+            UPDATE factorys
+            SET COMPANY = '페라리'
+            WHERE COMPANY_ID = 'CAR-01';
+            */
             companyId = "CAR-01";
             company = "페라리";
             query = "UPDATE factorys " +
@@ -57,8 +58,10 @@ public class T_ConnectDBs0612 {
             count = statement.executeUpdate(query);
             System.out.println("업데이트된 레코드 수: " + count);
 
-            // DELETE FROM factorys
-            // WHERE COMPANY_ID = 'CAR-01';
+            /*
+            DELETE FROM factorys
+            WHERE COMPANY_ID = 'CAR-01';
+            */
             companyId = "CAR-01";
             query = "DELETE FROM factorys " +
                     "WHERE COMPANY_ID = '"+companyId+"' ";
