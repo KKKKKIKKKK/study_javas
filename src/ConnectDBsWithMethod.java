@@ -1,13 +1,9 @@
 import java.sql.*;
 
-import cars.FactoryDMLs;
+import cars.AnyStatements;
 
 public class ConnectDBsWithMethod {
     public static void main(String[] args) {
-       Connection connection ; 
-       Statement statement ; 
-       
-       
         try {
             // - MySQL workbench 실행 : JDBC
             // - User/password와 접속 IP:port 접속
@@ -15,28 +11,26 @@ public class ConnectDBsWithMethod {
             String user = "root";
             String password = "!yojulab*";
 
-            connection = DriverManager.getConnection(url, user, password);
+            Connection connection = DriverManager.getConnection(url, user, password);
             System.out.println("DB연결 성공\n");
 
             // - query Edit
-            statement = connection.createStatement();
+            Statement statement = connection.createStatement();
             String query = "SELECT * FROM factorys";
-            FactoryDMLs factoryDMLs = new FactoryDMLs(); // 1)factory 인스턴스화, 
-            ResultSet resultSet = factoryDMLs.selectStatements(statement, query);
+            AnyStatements anyStatements = new AnyStatements();
+            ResultSet resultSet = anyStatements.selectStatement(statement, query);
             while (resultSet.next()) {
                 System.out.println(resultSet.getString("COMPANY_ID") + resultSet.getString("COMPANY"));
             }
 
             // SELECT COUNT(*) AS CNT FROM factorys;
             query = "SELECT COUNT(*) AS CNT FROM factorys";
-            resultSet = factoryDMLs.selectStatements(statement, query); //2)위에 factorydml 데리고옴. 
+            resultSet = statement.executeQuery(query);
             int totalCount = 0;
-
             while (resultSet.next()) {
                 System.out.println(resultSet.getInt("CNT"));
                 totalCount = resultSet.getInt("CNT");
             }
-            // function 화 시켜야함 초기적인단계인 query전체 단계 
 
             /*
             INSERT INTO factorys
@@ -51,20 +45,12 @@ public class ConnectDBsWithMethod {
                     " VALUE " +
                     "('"+companyId+"', '"+company+"') ";
             
-            int count = factoryDMLs.insertStaments(statement, query);
+            int count = statement.executeUpdate(query);
             System.out.println();
-
-            statement.close(); 
-            connection.close(); 
         } catch (Exception e) {
             // TODO: handle exception
             System.out.println(e.getMessage());
-       
-       
-        }finally{                      // 1)   에러이든 아니든 자원반납 목적 동작시켜주고 싶을 때finally 사용 
-                   // 1-1) 인스턴스 new 반대로 수행 
-                                      // 1-2) editor를 코드화시킬때, 
-        }                             // 1-3) 
+        }
         System.out.println();
     }
 }
