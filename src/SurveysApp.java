@@ -3,6 +3,8 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
+import surveys.Statistics;
+
 public class SurveysApp
 {
     public static void main(String[] args)
@@ -11,30 +13,20 @@ public class SurveysApp
         {
             String url = "jdbc:mysql://127.0.0.1:3306/db_survey";
             String user = "root";
-            String password = "!yojulab*";
+            String password = "12345678";
 
             Connection connection = DriverManager.getConnection(url, user, password);
             System.out.println("DB연결 성공\n");
 
             // - query Edit
             Statement statement = connection.createStatement();
-            System.out.println("--- 통계 ---");
-            String queryA = "SELECT  count(*) CNT\r\n" + //
-                    "FROM(\r\n" + //
-                    "\tSELECT RESPONDENTS_ID , count(*) CNT\r\n" + //
-                    "\tFROM statistics\r\n" + //
-                    "\tgroup BY RESPONDENTS_ID \r\n" + //
-                    ")AS  T_STATISTICS";
-            ResultSet resultSet = statement.executeQuery(queryA);
-            while (resultSet.next()) {
-                System.out.println("-- 총 설문자 : " + resultSet.getString("CNT") );
-            }
 
-
-           
-        } catch (Exception e) {
-            // TODO: handle exception
-
+            // 통계 - 총 설문자 표시
+            Statistics statistics = new Statistics();
+            statistics.getRespondents(statement);
+        }
+        catch (Exception e)
+        {
              System.out.println(e.getMessage());
         }
     }
