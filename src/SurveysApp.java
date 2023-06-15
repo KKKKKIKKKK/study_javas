@@ -20,13 +20,23 @@ public class SurveysApp
 
             // - query Edit
             Statement statement = connection.createStatement();
+            System.out.println("--- 통계 ---");
+            String queryA = "SELECT  count(*) CNT\r\n" + //
+                    "FROM(\r\n" + //
+                    "\tSELECT RESPONDENTS_ID , count(*) CNT\r\n" + //
+                    "\tFROM statistics\r\n" + //
+                    "\tgroup BY RESPONDENTS_ID \r\n" + //
+                    ")AS  T_STATISTICS";
+            ResultSet resultSet = statement.executeQuery(queryA);
+            while (resultSet.next()) {
+                System.out.println("-- 총 설문자 : " + resultSet.getString("CNT") );
+            }
 
-            // 통계 - 총 설문자 표시
-            Statistics statistics = new Statistics();
-            statistics.getRespondents(statement);
-        }
-        catch (Exception e)
-        {
+
+           
+        } catch (Exception e) {
+            // TODO: handle exception
+
              System.out.println(e.getMessage());
         }
     }
