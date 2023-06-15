@@ -11,29 +11,32 @@ public class SurveysApp
         {
             String url = "jdbc:mysql://127.0.0.1:3306/db_survey";
             String user = "root";
-            String password = "12345678";
+            String password = "!yojulab*";
 
             Connection connection = DriverManager.getConnection(url, user, password);
             System.out.println("DB연결 성공\n");
 
-            System.out.println("--- 통계 ---");
-            // -- 총 설문자: 3명
+            // - query Edit
             Statement statement = connection.createStatement();
-
-            String queryB = "select count(*) CNT\r\n" + //
-                    "from (\r\n" + //
-                    "select respondents_id, count(*) as CNT\r\n" + //
-                    "from statistics\r\n" + //
-                    "group by respondents_id) as T_static;";
-            ResultSet resultSet = statement.executeQuery(queryB);
-            while (resultSet.next())
-            {
-                System.out.println("-- 총 설문자: " + resultSet.getString("CNT"));
+            System.out.println("--- 통계 ---");
+            String queryA = "SELECT  count(*) CNT\r\n" + //
+                    "FROM(\r\n" + //
+                    "\tSELECT RESPONDENTS_ID , count(*) CNT\r\n" + //
+                    "\tFROM statistics\r\n" + //
+                    "\tgroup BY RESPONDENTS_ID \r\n" + //
+                    ")AS  T_STATISTICS";
+            ResultSet resultSet = statement.executeQuery(queryA);
+            while (resultSet.next()) {
+                System.out.println("-- 총 설문자 : " + resultSet.getString("CNT") );
             }
+
+
+           
+        } catch (Exception e) {
+            // TODO: handle exception
+
+             System.out.println(e.getMessage());
         }
-        catch (Exception e)
-        {
-            System.out.println(e.getMessage());
-        }    
     }
+    
 }
