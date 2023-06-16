@@ -2,7 +2,11 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.HashMap;
+import java.util.Scanner;
+import java.util.UUID;
 
+import commons.Commons;
 import surveys.Statistics;
 
 public class SurveysApp
@@ -28,12 +32,19 @@ public class SurveysApp
                     "from respondents;";
             ResultSet resultSet = statement.executeQuery(queryB);
             int number = 1;
+            Scanner scanners = new Scanner(System.in);
+
+            HashMap<String, String> respondentsInfo = new HashMap<>();
             while (resultSet.next())
             {
                 System.out.print(number + "." + resultSet.getString("respondents") + ", ");
+                respondentsInfo.put(String.valueOf(number), resultSet.getString("respondents_id"));
                 number = number + 1;
             }
             System.out.println();
+            // 설문자 선택
+            System.out.print("설문자 선택: ");
+            String respondent = scanners.nextLine();
 
             // -- 설문 시작
             // -------- 참조 : poll contents example -------------
@@ -45,6 +56,8 @@ public class SurveysApp
             resultSet = statement.executeQuery(queryB);
             number = 1;
             Statement statement_second = connection.createStatement();
+
+            Commons commons = new Commons();
             while (resultSet.next())
             {
                 System.out.println(number + "." + resultSet.getString("questions") + ", ");
@@ -56,14 +69,29 @@ public class SurveysApp
                     "and questions_id = 'Q1';";
             ResultSet resultSet_second = statement_second.executeQuery(queryB);
             int number_second = 1;
+            HashMap<String, String> choiceInfor = new HashMap<>();
                 while (resultSet_second.next())
                 {
                     System.out.print("(" + number_second + ")" + "." + resultSet_second.getString("choice") + ", ");
+                    choiceInfor.put(String.valueOf(number_second), resultSet_second.getString("choice_id"));
                     number_second = number_second + 1;
                 }
+            resultSet_second.close();
             System.out.println();
+            // insert 문 작성
+            System.out.print("답항 선택: ");
+            String choice_key = scanners.nextLine();   // 1, 2, 3으로 답변
+            queryB = "insert into statistics\n" + //
+                    "(statistics_id, respondents_id, questions_id, choice_id)\n" + //
+                    "values\n" + //
+                    "('" + commons.generateUUID() + "', '" + respondentsInfo.get(respondent)
+                    + "', '" + resultSet.getString("questions_id")
+                    + "', '" + choiceInfor.get(choice_key) + "');";
+            int result = statement_second.executeUpdate(queryB);
+
             number = number + 1;
             }
+            System.out.println();
 
             //통계 - 총 설문자 표시
             Statistics statistics = new Statistics();

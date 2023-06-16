@@ -24,3 +24,26 @@ from questions;
 
 select *
 from question_choice;
+
+delete from statistics
+where respondents_id = 'R1';
+
+insert into statistics
+(statistics_id, respondents_id, questions_id, choice_id)
+values
+('ST-01', 'R1', 'Q1', 'C3');
+
+insert into statistics
+(statistics_id, respondents_id, questions_id, choice_id)
+values
+('ST-02', 'R1', 'Q2', 'C1');
+
+insert into statistics
+(statistics_id, respondents_id, questions_id, choice_id)
+values
+('694ce8f7-3e02-4fbf-8627-aec2e5958451', 'R1', 'Q1', 'C2');
+
+insert into statistics
+(statistics_id, respondents_id, questions_id, choice_id)
+values
+('d90e2bc4-9b71-4a4e-88fa-64d244e5c7be', 'R1', 'Q2', 'C3');
