@@ -18,6 +18,10 @@ public class Sanners {
         
         myObj.close(); // ★ 꼭 작성하기 
         //return 0;
+    }
+
+    public String nextLine() {
+        return null;
     } 
     
 }
