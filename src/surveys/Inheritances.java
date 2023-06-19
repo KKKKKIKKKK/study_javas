@@ -8,6 +8,7 @@ import vehicles.Bicycle;
 import vehicles.Car;
 // import vehicles.MountainBike;
 import vehicles.RoadCycle;
+import vehicles.Scooter;
 
 public class Inheritances {
     public static void main(String[] args) {
@@ -28,17 +29,23 @@ public class Inheritances {
             // System.out.println(roadCycle .toString());
 
             // 구현하고 호출하기
-            Car car = new Car();
+            // Car car = new Car();
 
-            int speed = car.speedUp(1);
-            speed = car.speedDown(2);
+            // int speed = car.speedUp(1);
+            // speed = car.speedDown(2);
 
-            Bike bike = new Bike();
-            Vehicle car_second = new Vehicle(); 
+            // Bike bike = new Bike();
+            // Vehicle car_second = new Vehicle(); 
              
+            // System.out.println();
+
+            // Map<String, String> hashMap = new HashMap<>(); 
+
+            //스쿠터 추상화 확인 
+            Scooter scooter = new Scooter();
             System.out.println();
 
-            Map<String, String> hashMap = new HashMap<>(); 
+            
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
