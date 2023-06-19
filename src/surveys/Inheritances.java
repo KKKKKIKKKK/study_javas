@@ -28,13 +28,13 @@ public class Inheritances {
             // System.out.println(roadCycle .toString());
 
             // 구현하고 호출하기
-            car car = new car();
+            Car car = new Car();
 
             int speed = car.speedUp(1);
             speed = car.speedDown(2);
 
-            Vehicle bike = new Bike();
-            Vehicle car_second = new car(); 
+            Bike bike = new Bike();
+            Vehicle car_second = new Vehicle(); 
              
             System.out.println();
 
