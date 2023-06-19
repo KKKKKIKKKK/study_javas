@@ -2,6 +2,7 @@ package surveys;
 
 import Inheritances.ObjectInheritances;
 import vehicles.Bicycle;
+import vehicles.Car;
 // import vehicles.MountainBike;
 import vehicles.RoadCycle;
 
@@ -23,8 +24,14 @@ public class Inheritances
             // MountainBike mountainBike = new MountainBike(6200, "yellow", 5);
             // System.out.println();
 
-            RoadCycle roadCycle = new  RoadCycle (10000, "blue", "정지운 자전거 ");
-             System.out.println(roadCycle);
+            // RoadCycle roadCycle = new  RoadCycle (10000, "blue", "정지운 자전거 ");
+            //  System.out.println(roadCycle);
+
+            // 구현하고 호출하기
+            Car car = new Car();
+            int speed = car.speedup(1);
+            speed = car.speedDown(2);
+            System.out.println();
 
 
         }
