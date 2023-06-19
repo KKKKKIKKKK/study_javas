@@ -24,7 +24,7 @@ public class Inheritances
             // System.out.println();
 
             RoadCycle roadCycle = new  RoadCycle (10000, "blue", "정지운 자전거 ");
-             System.out.println();
+             System.out.println(roadCycle.toString());
 
 
         }
