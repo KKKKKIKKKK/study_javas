@@ -2,16 +2,22 @@ package vehicles;
 
 public class RoadCycle extends Bicycle
 {
-    String name;
-    public RoadCycle(String name, String color, int price)
+    int seatHight;
+    private String name;
+    public RoadCycle()
     {
-        this.name = name;
-        this.color = color;
-        this.price = price;
+
     }
-        public String toString()
+    public RoadCycle(int price, String color, String name)
     {
-        String str = "name: " + this.name + this.price + " " + "color: " + this.color;
+        this. name = name;
+        super.price = price;
+        super.color = color;
+    }
+
+    public String toString()
+    {
+        String str = " price: " + super.price + " " + " color: " + super.color + " " + "name: " + this.name;
         return str;
     }
 }
