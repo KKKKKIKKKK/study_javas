@@ -2,7 +2,11 @@ package surveys;
 
 import Inheritances.ObjectInheritances;
 import vehicles.Bicycle;
+<<<<<<< HEAD
+import vehicles.MountainBike;
+=======
 // import vehicles.MountainBike;
+>>>>>>> 8b3467482eb8f444913484250930d8ebd693c356
 import vehicles.RoadCycle;
 
 public class Inheritances
@@ -21,12 +25,18 @@ public class Inheritances
             // mountain 상속해 활용
             // MountainBike mountainBike = new MountainBike();
             // MountainBike mountainBike = new MountainBike(6200, "yellow", 5);
+<<<<<<< HEAD
+
+            RoadCycle roadCycle = new RoadCycle("제품명", "red", 18600);
+            System.out.println();
+=======
             // System.out.println();
 
             RoadCycle roadCycle = new  RoadCycle (10000, "blue", "정지운 자전거 ");
              System.out.println();
 
 
+>>>>>>> 8b3467482eb8f444913484250930d8ebd693c356
         }
         catch (Exception e)
         {
