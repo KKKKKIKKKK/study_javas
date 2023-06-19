@@ -1,10 +1,10 @@
 package vehicles;
 
-public class Car implements Vehicle
+public class Bike implements Vehicle
 {
 
     int speed = 0;
-    int increment = 20;
+    int increment = 5;
 
     @Override
     public int speedUp(int val)
@@ -19,4 +19,5 @@ public class Car implements Vehicle
         this.speed = this.speed - increment;
         return this.speed;
     }
+    
 }

@@ -1,10 +1,15 @@
 package surveys;
 
-import Inheritances.ObjectInheritances;
-import vehicles.Bicycle;
+import java.util.HashMap;
+import java.util.Map;
+
+// import Inheritances.ObjectInheritances;
+// import vehicles.Bicycle;
+import vehicles.Bike;
 import vehicles.Car;
 // import vehicles.MountainBike;
-import vehicles.RoadCycle;
+// import vehicles.RoadCycle;
+import vehicles.Vehicle;
 
 public class Inheritances
 {
@@ -29,10 +34,14 @@ public class Inheritances
 
             // 구현하고 호출하기
             Car car = new Car();
-            int speed = car.speedup(1);
+            int speed = car.speedUp(1);
             speed = car.speedDown(2);
+
+            Vehicle bike = new Bike();
+            Vehicle car_second = new Car();
             System.out.println();
 
+            Map<String, String> hashMap = new HashMap<>();
 
         }
         catch (Exception e)
