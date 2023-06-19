@@ -3,6 +3,7 @@ package surveys;
 import Inheritances.ObjectInheritances;
 import vehicles.Bicycle;
 import vehicles.MountainBike;
+import vehicles.RoadCycle;
 
 public class Inheritances
 {
@@ -19,7 +20,9 @@ public class Inheritances
 
             // 상속해 활용
             // MountainBike mountainBike = new MountainBike();
-            MountainBike mountainBike = new MountainBike(6200, "yellow", 5);
+            // MountainBike mountainBike = new MountainBike(6200, "yellow", 5);
+
+            RoadCycle roadCycle = new RoadCycle("제품명", "red", 18600);
             System.out.println();
         }
         catch (Exception e)
