@@ -7,6 +7,7 @@ public class HumanAnimalExtend implements InterfaceAnimal
     int setLegs = 2;
     int increament = 3;
     String setEnableSpeech = "Yes";
+
     @Override
     public int setLegs(int val)
     {
@@ -26,7 +27,8 @@ public class HumanAnimalExtend implements InterfaceAnimal
     }
 
     @Override
-    public int speed(int val) {
+    public int speed(int val)
+    {
         this.speed += this.increament;
         return this.speed;
     }
