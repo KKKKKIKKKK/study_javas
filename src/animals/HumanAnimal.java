@@ -11,7 +11,7 @@ public class HumanAnimal extends HumanAnimalExtend
         {
         HumanAnimalExtend humanAnimalExtend = new HumanAnimalExtend();
         this.speed = humanAnimalExtend.speed(1);
-        String spd = "Speed : " + this.speed + "km";
+        String spd = "Speed: " + this.speed + "km";
         return spd;
     }
 }

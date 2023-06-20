@@ -11,7 +11,7 @@ public class HorseAnimal extends HorseAnimalExtend
     {
         HorseAnimalExtend horseAnimalExtend = new HorseAnimalExtend();
         this.speed = horseAnimalExtend.speed(2);
-        String spd = "Speed : " + this.speed + "km";
+        String spd = "Speed: " + this.speed + "km";
         return spd;
     }
 }
