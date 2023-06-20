@@ -42,19 +42,6 @@ public class Inheritances
             // int speed = car.speedUp(1);
             // speed = car.speedDown(2);
 
-<<<<<<< HEAD
-            // Vehicle bike = new Bike();
-            // Vehicle car_second = new Car(); 
-
-            // Map<String, String> hashMap = new HashMap<>();
-            // 추상화 확인
-            Scooter scooter = new Scooter();
-            System.out.println();
-
-        }
-        catch (Exception e)
-        {
-=======
             // Bike bike = new Bike();
             // Vehicle car_second = new Vehicle(); 
              
@@ -68,7 +55,6 @@ public class Inheritances
 
             
         } catch (Exception e) {
->>>>>>> 7384654a0d39b8879414eac09f75aa3c6175906f
             System.out.println(e.getMessage());
         }
     }
