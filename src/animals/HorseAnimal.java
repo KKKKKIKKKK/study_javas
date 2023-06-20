@@ -4,7 +4,7 @@ public class HorseAnimal extends HorseAnimalExtend
 {
     public String toString()
     {
-        String str = "Legs : " + this.setLegs + ", Arms : " + this.setArms + ", Speech : " + this.setEnableSpeech;
+        String str = "Legs: " + this.setLegs + " " + "Arms: " + this.setArms + " " + "Speech: " + this.setEnableSpeech;
         return str;
     }
     public String getSpeed()
