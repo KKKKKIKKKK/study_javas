@@ -28,7 +28,7 @@ public class HorseAnimalExtend implements InterfaceAnimal
     @Override
     public int speed(int val)
     {
-        this.speed += this.increament;
+        this.speed = this.speed + this.increament;
         return this.speed;
     }
 }
