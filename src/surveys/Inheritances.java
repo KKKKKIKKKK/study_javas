@@ -5,14 +5,22 @@ import java.util.Map;
 
 import Inheritances.ObjectInheritances;
 import vehicles.Bicycle;
+import vehicles.Bike;
 import vehicles.Car;
 // import vehicles.MountainBike;
 import vehicles.RoadCycle;
 import vehicles.Scooter;
+<<<<<<< HEAD
+import vehicles.Vehicle;
+=======
+>>>>>>> 7384654a0d39b8879414eac09f75aa3c6175906f
 
-public class Inheritances {
-    public static void main(String[] args) {
-        try {
+public class Inheritances
+{
+    public static void main(String[] args)
+    {
+        try
+        {
             // Object 확인
             // ObjectInheritances objectInheritances = new ObjectInheritances();
 
