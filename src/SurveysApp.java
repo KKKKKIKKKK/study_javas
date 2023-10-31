@@ -19,7 +19,7 @@ public class SurveysApp {
             // - User/password와 접속 IP:port 접속
             String url = "jdbc:mysql://127.0.0.1:3306/db_survey";
             String user = "root";
-            String password = "!yojulab*";
+            String password = "12345678";
 
             Connection connection = DriverManager.getConnection(url, user, password);
             System.out.println("DB연결 성공\n");
@@ -38,8 +38,7 @@ public class SurveysApp {
 
             HashMap<String, String> respondentsInfo = new HashMap<>();
             while (resultSet.next()) {
-                System.out.print(number + "." +
-                        resultSet.getString("respondents") + ",");
+                System.out.print(number + "." + resultSet.getString("respondents") + ",");
                 respondentsInfo.put(String.valueOf(number), resultSet.getString("RESPONDENTS_ID"));
                 number = number + 1;
             }
@@ -61,9 +60,9 @@ public class SurveysApp {
             Statement statement_second = connection.createStatement();
 
             Commons commons = new Commons();
-            while (resultSet.next()) {
-                System.out.println(number + "." +
-                        resultSet.getString("questions") + ",");
+            while (resultSet.next())
+            {
+                System.out.println(number + "." + resultSet.getString("questions") + ",");
                 // 답항 출력
                 queryA = "SELECT T_CHO.CHOICE_ID, T_CHO.CHOICE\n" + //
                         "FROM question_choice AS T_QUES\n" + //
@@ -73,9 +72,9 @@ public class SurveysApp {
                 ResultSet resultSet_second = statement_second.executeQuery(queryA);
                 int number_second = 1;
                 HashMap<String, String> choiceInfor = new HashMap<>();
-                while (resultSet_second.next()) {
-                    System.out.print(" (" + number_second + ")" +
-                            resultSet_second.getString("CHOICE") + ",");
+                while (resultSet_second.next())
+                {
+                    System.out.print(" (" + number_second + ")" + resultSet_second.getString("CHOICE") + ",");
                     choiceInfor.put(String.valueOf(number_second), resultSet_second.getString("CHOICE_ID"));
                     number_second = number_second + 1;
                 }
