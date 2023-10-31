@@ -7,7 +7,11 @@ public class ConnectDBs0612 {
         try {
             // - MySQL workbench 실행 : JDBCs
             // - User/password와 접속 IP:port 접속
+<<<<<<< HEAD
             String url = "jdbc:mysql://192.168.0.42:3306/db_cars";
+=======
+            String url = "jdbc:mysql://192.168.0.40:3306/db_cars";
+>>>>>>> 083d2bbd77266195cf787fb8351010679cb4c3e6
             String user = "yojulab";
             String password = "!yojulab*";
 
@@ -35,15 +39,24 @@ public class ConnectDBs0612 {
             // (COMPANY_ID , COMPANY)
             // VALUE
             // ('CAR-01' , 'AUDI'); 
+<<<<<<< HEAD
             String companyId = "CAR-01";               //companyId 변수설정 
             String company = "AUDI";                    //company 변수설정 
             query = "INSERT INTO factorys " +           // 스페이스 찍어줌. 
                     "(COMPANY_ID , COMPANY) " +         //COMPANY_ID , COMPANY 를 위에 변수로 설정 
                     " VALUE " + 
                     "('"+companyId+"', '"+company+"') "; //쿼리안에 ' " +변수로 넣어준 상태에서 진행. 
+=======
+            // String companyId = "CAR- 01";               //companyId 변수설정 
+            // String company = "AUDI";                    //company 변수설정 
+            // query = "INSERT INTO factorys " +           // 스페이스 찍어줌. 
+            //         "(COMPANY_ID , COMPANY) " +         //COMPANY_ID , COMPANY 를 위에 변수로 설정 
+            //         " VALUE " + 
+            //         "('"+companyId+"', '"+company+"') "; //쿼리안에 ' " +변수로 넣어준 상태에서 진행. 
+>>>>>>> 083d2bbd77266195cf787fb8351010679cb4c3e6
            
            
-            int count =  statement.executeUpdate(query);
+            // int count =  statement.executeUpdate(query);
             System.out.println();
         } catch (Exception e) {      //에러발생시 캐치함. 
             // TODO: handle exception
